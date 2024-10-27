@@ -44,7 +44,7 @@ Use the menu to navigate through the following options:
 2. Checks if `install.sh` or `makefile` exist.
 3. Runs either `install.sh` or `makefile` and builds the package.
 4. Cleans everything up.
-### Alias
+### Alias (guide for bash users)
 If you want, instead of going to the directory where the script is located you can create an alias so you can execute `aptui` anywhere you want.
 Here's how to do this:
 1. Open your terminal
@@ -56,7 +56,20 @@ Here's how to do this:
   ```bash
   nano ~/.bash_profile
   ```
-
+3. Add the alias
+   To add the alias add this line at the bottom of the file:
+   ```bash
+   alias aptui='/path/to/aptui.sh'
+   ```
+4. Save and exit.
+5. To confirm the changes, run:
+  ```bash
+  source ~/.bashrc
+  ```
+  or
+  ```bash
+  source ~/.bash_profile
+  ```
 
 ## License
 This project is licensed under the MIT License.
