@@ -1,5 +1,5 @@
 # aptui
-`aptui` is a simple command-line tool for installing packages. Just in case you're lazy to type ```sudo apt-get install <package>```
+`aptui` is a simple command-line tool for installing packages. Just in case you're lazy to type ```sudo apt-get install <package>```. Don't ask why I made this. I don't know.
 
 ## Features
 - **Install packages:** Sooo revolutionary!
