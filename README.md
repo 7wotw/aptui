@@ -23,7 +23,7 @@
 
 Clone this repository and make `aptui` executable:
 ```bash
-git clone https://github.com/yourusername/aptui.git
+git clone https://github.com/hitofuki/aptui.git
 cd aptui
 chmod +x aptui.sh
 ```
