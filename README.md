@@ -7,6 +7,7 @@
 - **List installed packages:** You never knew you needed this! (you don't)
 - **Install from git:** Automatically clone and make a git repo. Pretty cool!
 - **Search for packages:** Find packages by searching with keywords.
+- Very similar UI to Network Manager TUI.
 
 ## Requirements
 - `dialog` package (for creating the UI)
