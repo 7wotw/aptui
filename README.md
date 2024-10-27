@@ -1,6 +1,7 @@
 # aptui
 
-`aptui` is a simple, interactive command-line utility for managing packages on Debian-based systems. It provides a dialog-based interface to install, remove, search, and list packages.
+`aptui` is a simple command-line tool for installing packages. Just in case you're lazy to type ```bash
+  sudo apt-get install <package>```
 
 ## Features
 
