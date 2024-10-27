@@ -2,6 +2,7 @@
 `aptui` is a simple command-line tool for installing packages. Just in case you're lazy to type ```sudo apt-get install <package>```. Don't ask why I made this. I don't know.
 
 ## Features
+- **Support for most Linux distributions!**
 - **Install packages:** Sooo revolutionary!
 - **Remove packages:** Even more revolutionary!
 - **List installed packages:** You never knew you needed this! (you don't)
