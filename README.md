@@ -1,2 +1,2 @@
 # aptui
-simple bash package manager
+Simple bash package manager with UI based on apt-get.
