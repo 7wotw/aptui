@@ -197,6 +197,7 @@ install_from_git() {
         git clone "$REPO_URL" temp_repo
         if [ $? -eq 0 ]; then
             cd temp_repo || { dialog --msgbox "Failed to change directory to temp_repo." 6 40; return; }
+
             if [ -f "install.sh" ]; then
                 dialog --yesno "Found 'install.sh'. Do you want to run it?" 6 40
                 if [ $? -eq 0 ]; then
@@ -207,9 +208,29 @@ install_from_git() {
                         dialog --msgbox "Failed to run 'install.sh'." 6 40
                     fi
                 fi
+            elif [ -f "Makefile" ]; then
+                dialog --yesno "Found 'Makefile'. Do you want to run 'make'?" 6 40
+                if [ $? -eq 0 ]; then
+                    make
+                    if [ $? -eq 0 ]; then
+                        dialog --msgbox "'make' completed successfully." 6 40
+                        dialog --yesno "Do you want to run 'make install'?" 6 40
+                        if [ $? -eq 0 ]; then
+                            sudo make install
+                            if [ $? -eq 0 ]; then
+                                dialog --msgbox "Installation from Git completed successfully." 6 40
+                            else
+                                dialog --msgbox "Failed to run 'make install'." 6 40
+                            fi
+                        fi
+                    else
+                        dialog --msgbox "Failed to run 'make'." 6 40
+                    fi
+                fi
             else
-                dialog --msgbox "'install.sh' not found. You may need to install manually." 6 40
+                dialog --msgbox "'install.sh' and 'Makefile' not found. You may need to install manually." 6 40
             fi
+            
             cd ..
             rm -rf temp_repo 
         else
