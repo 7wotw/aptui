@@ -49,24 +49,29 @@ If you want, instead of going to the directory where the script is located you c
 Here's how to do this:
 1. Open your terminal
 2. Open your `.bashrc` or `.bash_profile` (both if your shell is bash) file in a text editor. This depends on your system:
+
    ```bash
    nano ~/.bashrc
    ```
    or
+
    ```bash
    nano ~/.bash_profile
    ```
 3. Add the alias
    To add the alias add this line at the bottom of the file:
+   
    ```bash
    alias aptui='/path/to/aptui.sh'
    ```
 4. Save and exit.
 5. To confirm the changes, run:
+
    ```bash
    source ~/.bashrc
    ```
    or
+
    ```bash
    source ~/.bash_profile
    ```
