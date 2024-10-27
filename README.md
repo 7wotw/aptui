@@ -12,13 +12,13 @@
 
 ## Supported package managers and distros
 ### Package managers:
-- APT-GET
-- Pacman
-- Yay
-- DNF
-- Zypper
-- XBPS-Install
-- EOPKG
+- apt-get
+- pacman
+- yay
+- dnf
+- zypper
+- xbps-install
+- eopkg
 ### Distros
 - Debian/Ubuntu (APT)
 - Arch Linux (Pacman, Yay with AUR)
