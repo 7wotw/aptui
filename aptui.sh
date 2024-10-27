@@ -39,6 +39,7 @@ select_distro() {
         *) dialog --msgbox "Invalid selection. Exiting." 6 40; exit 1 ;;
     esac
 
+    # Confirm selection
     dialog --yesno "You selected: $PACKAGE_MANAGER. Is this correct?" 7 50
     if [ $? -eq 0 ]; then
         echo "PACKAGE_MANAGER=$PACKAGE_MANAGER" > "$CONFIG_FILE"
