@@ -44,6 +44,11 @@ cd aptui
 chmod +x aptui.sh
 ```
 
+## Config
+The configuration file is generated after selecting a distribution.
+It's located in `~/.config/aptui` and contains only:
+```PACKAGE_MANAGER=apt-get``` (or your selected package manager)
+
 ## Usage
 Run `aptui` with the following command:
 ```bash
