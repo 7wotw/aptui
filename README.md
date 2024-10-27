@@ -10,6 +10,24 @@
 - **Search for packages:** Find packages by searching with keywords.
 - Very similar UI to Network Manager TUI.
 
+## Supported package managers and distros
+### Package managers:
+- APT-GET
+- Pacman
+- Yay
+- DNF
+- Zypper
+- XBPS-Install
+- EOPKG
+### Distros
+- Debian/Ubuntu (APT)
+- Arch Linux (Pacman, Yay with AUR)
+- Fedora (DNF)
+- openSUSE (zypper)
+- Void Linux (xbps-install)
+- Solus (eopkg)
+(I'll add more if requested)
+
 ## Requirements
 - `dialog` package (for creating the UI)
   
