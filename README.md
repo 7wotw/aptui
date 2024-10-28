@@ -86,8 +86,7 @@ Here's how to do this:
    ```bash
    nano ~/.bash_profile
    ```
-3. Add the alias
-   To add the alias add this line at the bottom of the file:
+3. To add the alias add this line at the bottom of the file:
    
    ```bash
    alias aptui='/path/to/aptui.sh'
