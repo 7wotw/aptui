@@ -6,6 +6,7 @@ CONFIG_FILE="$CONFIG_DIR/aptui.conf"
 mkdir -p "$CONFIG_DIR"
 
 select_distro() {
+    clear
     DISTRO=$(dialog --menu "Select your distribution:" 14 50 8 \
         1 "Debian/Ubuntu (apt-get)" \
         2 "Arch Linux (pacman)" \
@@ -57,6 +58,7 @@ else
 fi
 
 is_package_installed() {
+    clear
     case "$PACKAGE_MANAGER" in
         apt-get) dpkg -l | grep -q "^ii\s*$1" ;;
         pacman) pacman -Q "$1" >/dev/null 2>&1 ;;
@@ -69,6 +71,7 @@ is_package_installed() {
 }
 
 install_package() {
+    clear
     PACKAGE=$(dialog --inputbox "Enter the package name to install:" 8 40 3>&1 1>&2 2>&3)
     exitstatus=$?
     if [ $exitstatus = 0 ]; then
@@ -77,7 +80,6 @@ install_package() {
         else
             dialog --yesno "Are you sure you want to install package '$PACKAGE'?" 6 40
             if [ $? -eq 0 ]; then
-                clear
                 echo "Installing package '$PACKAGE'..."
                 case "$PACKAGE_MANAGER" in
                     apt-get) sudo apt-get install -y "$PACKAGE" ;;
@@ -103,6 +105,7 @@ install_package() {
 }
 
 remove_package() {
+    clear
     PACKAGE=$(dialog --inputbox "Enter the package name to remove:" 8 40 3>&1 1>&2 2>&3)
     exitstatus=$?
     if [ $exitstatus = 0 ]; then
@@ -111,7 +114,6 @@ remove_package() {
         else
             dialog --yesno "Are you sure you want to remove package '$PACKAGE'?" 6 40
             if [ $? -eq 0 ]; then
-                clear
                 echo "Removing package '$PACKAGE'..."
                 case "$PACKAGE_MANAGER" in
                     apt-get) sudo apt-get remove --purge -y "$PACKAGE" ;;
@@ -138,6 +140,7 @@ remove_package() {
 }
 
 list_installed_packages() {
+    clear
     case "$PACKAGE_MANAGER" in
         apt-get) INSTALLED_PACKAGES=$(dpkg-query -f '${binary:Package}\n' -W) ;;
         pacman) INSTALLED_PACKAGES=$(pacman -Q) ;;
@@ -158,6 +161,7 @@ list_installed_packages() {
 }
 
 search_package() {
+    clear
     QUERY=$(dialog --inputbox "Enter the package name or keyword to search:" 8 40 3>&1 1>&2 2>&3)
     exitstatus=$?
     
@@ -188,6 +192,7 @@ search_package() {
 
 
 install_from_git() {
+    clear
     REPO_URL=$(dialog --inputbox "Enter the Git repository URL:" 8 40 3>&1 1>&2 2>&3)
     exitstatus=$?
     if [ $exitstatus = 0 ]; then
@@ -243,6 +248,7 @@ install_from_git() {
 
 show_menu() {
     while true; do
+        clear
         CHOICE=$(dialog --no-cancel --menu "APTUI Package Manager (using: $PACKAGE_MANAGER)" 14 60 8 \
             1 "Install a package" \
             2 "Remove a package" \
