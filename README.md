@@ -20,9 +20,9 @@
 - xbps-install
 - eopkg
 ### Distros
-- Debian/Ubuntu (APT)
-- Arch Linux (Pacman, Yay with AUR)
-- Fedora (DNF)
+- Debian/Ubuntu (apt)
+- Arch Linux (pacman, yay with AUR)
+- Fedora (dnf)
 - openSUSE (zypper)
 - Void Linux (xbps-install)
 - Solus (eopkg)
